@@ -1,34 +1,53 @@
 "use client";
 
 import * as React from 'react'
-import { Container } from '@/node_modules/@mui/material/index';
-import Paper from '@mui/material/Paper';
 
 // components
-import MainTable from './components/table';
-import ResponsiveAppBar from './components/appbar';
+import Sidebar from './components/sidebar/sidebar';
+// import Tables from "./views/tables"
+// import routes from "./routes"
 
-// theme
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-
-const darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
+let routes = [
+  {
+    path: "/index",
+    name: "Master List",
+    icon: "ni ni-tv-2 text-primary",
+    layout: "/admin",
   },
-});
+  {
+    path: "/maps",
+    name: "Maps",
+    icon: "ni ni-pin-3 text-orange",
+    layout: "/admin",
+  },
+  {
+    path: "/tables",
+    name: "Tables",
+    icon: "ni ni-bullet-list-67 text-red",
+    layout: "/admin",
+  },
+  {
+    path: "/login",
+    name: "Login",
+    icon: "ni ni-key-25 text-info",
+    layout: "/auth",
+  }
+];
 
 export default function Home() {
-  return (
-    <ThemeProvider theme={darkTheme}>
-      <CssBaseline />
-      <Paper elevation={0}>
-        <ResponsiveAppBar />
 
-        <Container>
-          <MainTable />
-        </Container>
-      </Paper>
-  </ThemeProvider>
+  return (
+      <>
+        <Sidebar
+          logo={{
+            innerLink: "/index",
+            outerLink: "none",
+            imgSrc: "/assets/img/brand/argon-react.png",
+            imgAlt: "Logo"
+          }}
+          routes={routes}
+        />
+      </>
+        
   )
 }
