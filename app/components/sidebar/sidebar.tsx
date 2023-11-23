@@ -104,8 +104,7 @@ function Sidebar(props: Props) {
         alt={logo.imgAlt} 
         className="navbar-brand-img" 
         src={logoImage} 
-        width={600}
-        height={600} />
+        width={150} />
     </NavbarBrand>
   );
 
@@ -134,19 +133,19 @@ function Sidebar(props: Props) {
             <NavItem>
               <NavLink href="https://demos.creative-tim.com/argon-dashboard-react/#/documentation/overview?ref=adr-admin-sidebar">
                 <i className="ni ni-spaceship" />
-                Getting started
+                About Us
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="https://demos.creative-tim.com/argon-dashboard-react/#/documentation/colors?ref=adr-admin-sidebar">
                 <i className="ni ni-palette" />
-                Foundation
+                Buy Us Coffee
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="https://demos.creative-tim.com/argon-dashboard-react/#/documentation/alerts?ref=adr-admin-sidebar">
                 <i className="ni ni-ui-04" />
-                Components
+                Contact Us
               </NavLink>
             </NavItem>
           </Nav>
